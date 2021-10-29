@@ -60,7 +60,7 @@ data: {
   "id": 420006353,
   "name": "Mountain View",
   "cod": 200
-  }    } }
+  }
 ```
 
 
