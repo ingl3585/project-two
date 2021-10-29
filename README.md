@@ -7,7 +7,7 @@
 
 ## Project Description
 
-Here is a new weather app that will provide more then enough information to satisfy any weather need. This app will let the user search for any city within the US and give the current temperature, high and low temperature for the day, conditions, pressure, wind speed, etc. In addition to that, it will also generate a 5 day forecast and an option to favorite locations so the user does not need to search for their favorite cities. Also for a little extra, moon phases, sunrise/sunset times, and a countdown for a full moon will also be implemented. This app may even tell the user what national holiday it is each day of the year. A hopeful functionality will include a weather radar around your current location (given that there is free current radar data available).
+Here is a new weather app that will provide more then enough information to satisfy any weather need. This app will let the user search for any city within the US and give the current temperature, high and low temperature for the day, conditions, pressure, wind speed, etc. In addition to that, it will also generate a 5 day forecast and an option to favorite locations so the user does not need to search for their favorite cities. Also for a little extra, moon phases, sunrise/sunset times, and a countdown for a full moon will also be implemented. This app may even tell the user what national day it is each day of the year. A hopeful functionality will include a weather radar around your current location (given that there is free current radar data available).
 
 ## API
 
