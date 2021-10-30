@@ -1,4 +1,5 @@
 import './App.css';
+import ContactMe from './components/ContactMe/ContactMe';
 import CurrentWeatherData from './components/CurrentWeather/CurrentWeather';
 import MoonInfo from './components/MoonInfo/MoonInfo';
 import Nav from './components/Nav/Nav';
@@ -13,6 +14,7 @@ const App = () => {
 			<CurrentWeatherData />
 			<WeatherForecast />
 			<MoonInfo />
+			<ContactMe />
 		</div>
 	);
 };

@@ -8,8 +8,8 @@ const WeatherForecast = () => {
 		let state = 'CO';
 		let cityState = city + ',' + state;
 		let key = 'f14fde324cf84653bcad1ab6ca1816e8';
-		let days = '6';
 		let units = 'I';
+		let days = '6';
 		const weatherDataUrl = `https://api.weatherbit.io/v2.0/forecast/daily?&key=${key}&city=${cityState}&days=${days}&units=${units}`;
 		const makeApiCall = (weatherDataUrl) => {
 			return fetch(weatherDataUrl)
