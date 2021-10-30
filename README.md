@@ -13,54 +13,57 @@ Here is a new weather app that will provide more then enough information to sati
 
 Use this section to include info about the API you have chosen and a code snippet of the data that it returns and is required for your project. 
 
-I am choosing the OpenWeatherMap API as it is free and easily accessible. 
+I am choosing the Weatherbit API as it is free and easily accessible. 
 
 
 ```
-data: {
-  "coord": {
-    "lon": -122.08,
-    "lat": 37.39
-  },
-  "weather": [
-    {
-      "id": 800,
-      "main": "Clear",
-      "description": "clear sky",
-      "icon": "01d"
+ {  
+  "data":[  
+    {  
+        "wind_cdir":"NE",
+        "rh":59,
+        "pod":"d",
+        "lon":"-78.63861",
+        "pres":1006.6,
+        "timezone":"America\/New_York",
+        "ob_time":"2017-08-28 16:45",
+        "country_code":"US",
+        "clouds":75,
+        "vis":10,
+        "wind_spd":6.17,
+        "wind_cdir_full":"northeast",
+        "app_temp":24.25,
+        "state_code":"NC",
+        "ts":1503936000,
+        "h_angle":0,
+        "dewpt":15.65,
+        "weather":{  
+          "icon":"c03d",
+          "code": 803,
+          "description":"Broken clouds"
+        },
+        "uv":2,
+        "aqi":45,
+        "station":"CMVN7",
+        "wind_dir":50,
+        "elev_angle":63,
+        "datetime":"2017-08-28:17",
+        "precip":0,
+        "ghi":444.4,
+        "dni":500,
+        "dhi":120,
+        "solar_rad":350,
+        "city_name":"Raleigh",
+        "sunrise":"10:44",
+        "sunset":"23:47",
+        "temp":24.19,
+        "lat":"35.7721",
+        "slp":1022.2
     }
   ],
-  "base": "stations",
-  "main": {
-    "temp": 282.55,
-    "feels_like": 281.86,
-    "temp_min": 280.37,
-    "temp_max": 284.26,
-    "pressure": 1023,
-    "humidity": 100
-  },
-  "visibility": 16093,
-  "wind": {
-    "speed": 1.5,
-    "deg": 350
-  },
-  "clouds": {
-    "all": 1
-  },
-  "dt": 1560350645,
-  "sys": {
-    "type": 1,
-    "id": 5122,
-    "message": 0.0139,
-    "country": "US",
-    "sunrise": 1560343627,
-    "sunset": 1560396563
-  },
-  "timezone": -25200,
-  "id": 420006353,
-  "name": "Mountain View",
-  "cod": 200
-  }
+  "minutely":[ ... ],
+  "count":1
+}
 ```
 
 

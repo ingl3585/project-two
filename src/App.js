@@ -1,12 +1,20 @@
 import './App.css';
-import CurrentWeatherData from './WeatherChart';
+import CurrentWeatherData from './components/CurrentWeather/CurrentWeather';
+import MoonInfo from './components/MoonInfo/MoonInfo';
+import Nav from './components/Nav/Nav';
+import WeatherForecast from './components/WeatherForecast/WeatherForecast';
+// import '../node_modules/amcharts_weather_icons_1.0.0/animated';
+// import '../node_modules/weather-api-icons';
 
-function App() {
+const App = () => {
 	return (
 		<div className='App'>
-			<CurrentWeatherData className='weather-pic' />
+			<Nav className='nav-container' />
+			<CurrentWeatherData />
+			<WeatherForecast />
+			<MoonInfo />
 		</div>
 	);
-}
+};
 
 export default App;
