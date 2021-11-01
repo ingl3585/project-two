@@ -18,6 +18,12 @@ const CurrentWeatherData = () => {
 		makeApiCall(weatherDataUrl);
 	}, []);
 
+	// Sunrise/sunset Time
+
+	let date = new Date();
+	let timezoneOffset = date.getTimezoneOffset() / 60;
+	console.log(timezoneOffset);
+
 	return (
 		<div>
 			<div>
