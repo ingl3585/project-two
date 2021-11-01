@@ -1,23 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-const WeatherForecast = () => {
-	const [weatherForecast, setWeatherForecast] = useState('');
-
-	useEffect(() => {
-		let city = 'Denver';
-		let state = 'CO';
-		let cityState = city + ',' + state;
-		let key = 'f14fde324cf84653bcad1ab6ca1816e8';
-		let units = 'I';
-		let days = '6';
-		const weatherDataUrl = `https://api.weatherbit.io/v2.0/forecast/daily?&key=${key}&city=${cityState}&days=${days}&units=${units}`;
-		const makeApiCall = (weatherDataUrl) => {
-			return fetch(weatherDataUrl)
-				.then((response) => response.json())
-				.then((data) => setWeatherForecast(data));
-		};
-		makeApiCall(weatherDataUrl);
-	}, []);
+const WeatherForecast = ({ weatherForecast }) => {
 	return (
 		<div>
 			<header>

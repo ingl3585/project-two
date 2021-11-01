@@ -1,24 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const MoonInfo = () => {
-	const [moon, setMoon] = useState('');
-	useEffect(() => {
-		let city = 'Denver';
-		let state = 'CO';
-		let cityState = city + ',' + state;
-		let key = 'f14fde324cf84653bcad1ab6ca1816e8';
-		let units = 'I';
-		let days = '1';
-		const moonDataUrl = `https://api.weatherbit.io/v2.0/forecast/daily?&key=${key}&city=${cityState}&days=${days}&units=${units}`;
-		const makeApiCall = (moonDataUrl) => {
-			return fetch(moonDataUrl)
-				.then((response) => response.json())
-				.then((data) => setMoon(data.data[0]));
-		};
-		makeApiCall(moonDataUrl);
-	}, []);
+const MoonInfo = ({ weatherForecast }) => {
+	let moonRise = weatherForecast ? weatherForecast.data[0].moonrise_ts : '';
+	let moonSet = weatherForecast ? weatherForecast.data[0].moonset_ts : '';
+	let phase = weatherForecast
+		? weatherForecast.data[0].moon_phase_lunation
+		: '';
 
-	let phase = moon.moon_phase_lunation;
 	const moonPhase = () => {
 		if (phase === 0) {
 			return <span>New Moon</span>;
@@ -64,7 +52,7 @@ const MoonInfo = () => {
 		} else if (hh === 12) {
 			h = 12;
 			ampm = 'PM';
-		} else if (hh == 0) {
+		} else if (hh === 0) {
 			h = 12;
 		}
 		time = h + ':' + min + ' ' + ampm + ' - ' + mm + '/' + dd;
@@ -74,9 +62,9 @@ const MoonInfo = () => {
 	return (
 		<div>
 			<h3>Moon Info</h3>
-			<div className='moon-phase'>Moon Phase: {moonPhase(moon)}</div>
-			<div>Moonrise: {convertTimestamp(moon.moonrise_ts)}</div>
-			<div>Moonset: {convertTimestamp(moon.moonset_ts)}</div>
+			<div className='moon-phase'>Moon Phase: {moonPhase(phase)}</div>
+			<div>Moonrise: {convertTimestamp(moonRise)}</div>
+			<div>Moonset: {convertTimestamp(moonSet)}</div>
 		</div>
 	);
 };
