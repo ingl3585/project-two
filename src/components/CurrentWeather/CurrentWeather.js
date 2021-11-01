@@ -24,13 +24,19 @@ const CurrentWeatherData = ({ currentWeather, weatherForecast }) => {
 
 	let sunRise = weatherForecast ? weatherForecast.data[0].sunrise_ts : '';
 	let sunSet = weatherForecast ? weatherForecast.data[0].sunset_ts : '';
+	let icon = currentWeather ? currentWeather.weather.icon : '';
 
 	return (
 		<div>
 			<div>
 				Location: {currentWeather.city_name}, {currentWeather.state_code}
 			</div>
-			<div>Image: {currentWeather ? currentWeather.weather.icon : ''}</div>
+			<div>
+				<img
+					src={`https://www.weatherbit.io/static/img/icons/${icon}.png`}
+					alt='weather-icon'
+				/>
+			</div>
 			<div>Temperature: {currentWeather.temp}°F</div>
 			<div>
 				High Temperature:{' '}
@@ -43,8 +49,12 @@ const CurrentWeatherData = ({ currentWeather, weatherForecast }) => {
 			<div>
 				Conditions: {currentWeather ? currentWeather.weather.description : ''}
 			</div>
+			<div>
+				Precipitation Chance:{' '}
+				{weatherForecast ? weatherForecast.data[0].pop : ''}%
+			</div>
 			<div>Relative Humidity: {currentWeather ? currentWeather.rh : ''}%</div>
-			<div>Pressure: {currentWeather.slp} mb</div>
+			<div>Barometric Pressure: {currentWeather.pres} mb</div>
 			<div>Wind Speed: {currentWeather.wind_spd} mph</div>
 			<div>
 				Wind Direction: {currentWeather.wind_dir}° {currentWeather.wind_cdir}

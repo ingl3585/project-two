@@ -1,6 +1,14 @@
 import React from 'react';
 
 const WeatherForecast = ({ weatherForecast }) => {
+	let dayOneIcon = weatherForecast ? weatherForecast.data[1].weather.icon : '';
+	let dayTwoIcon = weatherForecast ? weatherForecast.data[2].weather.icon : '';
+	let dayThreeIcon = weatherForecast
+		? weatherForecast.data[3].weather.icon
+		: '';
+	let dayFourIcon = weatherForecast ? weatherForecast.data[4].weather.icon : '';
+	let dayFiveIcon = weatherForecast ? weatherForecast.data[5].weather.icon : '';
+
 	return (
 		<div>
 			<header>
@@ -12,7 +20,10 @@ const WeatherForecast = ({ weatherForecast }) => {
 				<div>
 					<h4>Day 1</h4>
 					<div>
-						{weatherForecast ? weatherForecast.data[1].weather.icon : ''}
+						<img
+							src={`https://www.weatherbit.io/static/img/icons/${dayOneIcon}.png`}
+							alt='weather-icon'
+						/>
 					</div>
 					<div>
 						High Temperature:{' '}
@@ -30,7 +41,10 @@ const WeatherForecast = ({ weatherForecast }) => {
 				<div>
 					<h4>Day 2</h4>
 					<div>
-						{weatherForecast ? weatherForecast.data[2].weather.icon : ''}
+						<img
+							src={`https://www.weatherbit.io/static/img/icons/${dayTwoIcon}.png`}
+							alt='weather-icon'
+						/>
 					</div>
 					<div>
 						High Temperature:{' '}
@@ -48,7 +62,10 @@ const WeatherForecast = ({ weatherForecast }) => {
 				<div>
 					<h4>Day 3</h4>
 					<div>
-						{weatherForecast ? weatherForecast.data[3].weather.icon : ''}
+						<img
+							src={`https://www.weatherbit.io/static/img/icons/${dayThreeIcon}.png`}
+							alt='weather-icon'
+						/>
 					</div>
 					<div>
 						High Temperature:{' '}
@@ -66,7 +83,10 @@ const WeatherForecast = ({ weatherForecast }) => {
 				<div>
 					<h4>Day 4</h4>
 					<div>
-						{weatherForecast ? weatherForecast.data[4].weather.icon : ''}
+						<img
+							src={`https://www.weatherbit.io/static/img/icons/${dayFourIcon}.png`}
+							alt='weather-icon'
+						/>
 					</div>
 					<div>
 						High Temperature:{' '}
@@ -84,7 +104,10 @@ const WeatherForecast = ({ weatherForecast }) => {
 				<div>
 					<h4>Day 5</h4>
 					<div>
-						{weatherForecast ? weatherForecast.data[5].weather.icon : ''}
+						<img
+							src={`https://www.weatherbit.io/static/img/icons/${dayFiveIcon}.png`}
+							alt='weather-icon'
+						/>
 					</div>
 					<div>
 						High Temperature:{' '}

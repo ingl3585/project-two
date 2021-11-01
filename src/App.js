@@ -4,7 +4,7 @@ import CurrentWeatherData from './components/CurrentWeather/CurrentWeather';
 import MoonInfo from './components/MoonInfo/MoonInfo';
 import Nav from './components/Nav/Nav';
 import WeatherForecast from './components/WeatherForecast/WeatherForecast';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const App = () => {
 	const [currentWeather, setCurrentWeather] = useState('');
@@ -57,6 +57,31 @@ const App = () => {
 			makeApiCallTwo(forecastWeatherUrl);
 		});
 	};
+
+	useEffect(() => {
+		let cityState = 'New York';
+		let key = 'f14fde324cf84653bcad1ab6ca1816e8';
+		let units = 'I';
+		let days = '6';
+		const currentWeatherUrl = `https://api.weatherbit.io/v2.0/current?&key=${key}&city=${cityState}&units=${units}`;
+		const forecastWeatherUrl = `https://api.weatherbit.io/v2.0/forecast/daily?&key=${key}&city=${cityState}&days=${days}&units=${units}`;
+
+		const makeApiCallOne = (currentWeatherUrl) => {
+			return fetch(currentWeatherUrl)
+				.then((response) => response.json())
+				.then((data) => setCurrentWeather(data.data[0]));
+		};
+		makeApiCallOne(currentWeatherUrl);
+		const makeApiCallTwo = (forecastWeatherUrl) => {
+			return fetch(forecastWeatherUrl)
+				.then((response) => response.json())
+				.then((data) => setWeatherForecast(data));
+		};
+		makeApiCallTwo(forecastWeatherUrl);
+	}, []);
+
+	console.log(currentWeather);
+	console.log(weatherForecast);
 
 	return (
 		<div className='App'>

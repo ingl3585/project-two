@@ -16,7 +16,7 @@ const Nav = ({ handleSubmit, setWeatherSearch, handleClick }) => {
 							setWeatherSearch(input.replace(/\s+/g, '')); //Remove spaces from input -> https://stackoverflow.com/questions/24580912/remove-all-white-space-from-string-javascript
 						}}
 						type='text'
-						placeholder='Denver, CO'></input>
+						placeholder='New York City, NY'></input>
 					<button onClick={handleSubmit} type='submit'>
 						Submit
 					</button>
