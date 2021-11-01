@@ -1,9 +1,29 @@
 import React from 'react';
 
-const CurrentWeatherData = ({ currentWeather }) => {
-	// // Sunrise/sunset
-	// let date = new Date();
-	// let timezoneOffset = date.getTimezoneOffset() / 60;
+const CurrentWeatherData = ({ currentWeather, weatherForecast }) => {
+	/// Credit: Convert UNIX Timestamp from --> https://gist.github.com/kmaida/6045266
+	const convertTimestamp = (timestamp) => {
+		var d = new Date(timestamp * 1000),
+			hh = d.getHours(),
+			h = hh,
+			min = ('0' + d.getMinutes()).slice(-2),
+			ampm = 'AM',
+			time;
+		if (hh > 12) {
+			h = hh - 12;
+			ampm = 'PM';
+		} else if (hh === 12) {
+			h = 12;
+			ampm = 'PM';
+		} else if (hh === 0) {
+			h = 12;
+		}
+		time = h + ':' + min + ' ' + ampm;
+		return time;
+	};
+
+	let sunRise = weatherForecast ? weatherForecast.data[0].sunrise_ts : '';
+	let sunSet = weatherForecast ? weatherForecast.data[0].sunset_ts : '';
 
 	return (
 		<div>
@@ -12,11 +32,18 @@ const CurrentWeatherData = ({ currentWeather }) => {
 			</div>
 			<div>Image: {currentWeather ? currentWeather.weather.icon : ''}</div>
 			<div>Temperature: {currentWeather.temp}°F</div>
-			<div>High Temperature: ? °F</div>
-			<div>Low Temperature: ? °F</div>
+			<div>
+				High Temperature:{' '}
+				{weatherForecast ? weatherForecast.data[0].high_temp : ''}°F
+			</div>
+			<div>
+				Low Temperature:{' '}
+				{weatherForecast ? weatherForecast.data[0].low_temp : ''}°F
+			</div>
 			<div>
 				Conditions: {currentWeather ? currentWeather.weather.description : ''}
 			</div>
+			<div>Relative Humidity: {currentWeather ? currentWeather.rh : ''}%</div>
 			<div>Pressure: {currentWeather.slp} mb</div>
 			<div>Wind Speed: {currentWeather.wind_spd} mph</div>
 			<div>
@@ -24,8 +51,8 @@ const CurrentWeatherData = ({ currentWeather }) => {
 			</div>
 			<div>Wind Gusts: ? mph</div>
 			<div>Visibility: {currentWeather ? currentWeather.vis : ''} mi</div>
-			<div>Sunrise: ?</div>
-			<div>Sunset: ?</div>
+			<div>Sunrise: {convertTimestamp(sunRise)}</div>
+			<div>Sunset: {convertTimestamp(sunSet)}</div>
 		</div>
 	);
 };

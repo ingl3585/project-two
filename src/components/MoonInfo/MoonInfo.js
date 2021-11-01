@@ -1,6 +1,29 @@
 import React from 'react';
 
 const MoonInfo = ({ weatherForecast }) => {
+	/// Credit: Convert UNIX Timestamp from --> https://gist.github.com/kmaida/6045266
+	const convertTimestamp = (timestamp) => {
+		var d = new Date(timestamp * 1000),
+			mm = ('0' + (d.getMonth() + 1)).slice(-2),
+			dd = ('0' + d.getDate()).slice(-2),
+			hh = d.getHours(),
+			h = hh,
+			min = ('0' + d.getMinutes()).slice(-2),
+			ampm = 'AM',
+			time;
+		if (hh > 12) {
+			h = hh - 12;
+			ampm = 'PM';
+		} else if (hh === 12) {
+			h = 12;
+			ampm = 'PM';
+		} else if (hh === 0) {
+			h = 12;
+		}
+		time = h + ':' + min + ' ' + ampm + ' - ' + mm + '/' + dd;
+		return time;
+	};
+
 	let moonRise = weatherForecast ? weatherForecast.data[0].moonrise_ts : '';
 	let moonSet = weatherForecast ? weatherForecast.data[0].moonset_ts : '';
 	let phase = weatherForecast
@@ -35,29 +58,6 @@ const MoonInfo = ({ weatherForecast }) => {
 	};
 
 	moonPhase();
-
-	/// Credit: Convert UNIX Timestamp from --> https://gist.github.com/kmaida/6045266
-	const convertTimestamp = (timestamp) => {
-		var d = new Date(timestamp * 1000),
-			mm = ('0' + (d.getMonth() + 1)).slice(-2),
-			dd = ('0' + d.getDate()).slice(-2),
-			hh = d.getHours(),
-			h = hh,
-			min = ('0' + d.getMinutes()).slice(-2),
-			ampm = 'AM',
-			time;
-		if (hh > 12) {
-			h = hh - 12;
-			ampm = 'PM';
-		} else if (hh === 12) {
-			h = 12;
-			ampm = 'PM';
-		} else if (hh === 0) {
-			h = 12;
-		}
-		time = h + ':' + min + ' ' + ampm + ' - ' + mm + '/' + dd;
-		return time;
-	};
 
 	return (
 		<div>
