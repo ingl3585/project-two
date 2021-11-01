@@ -33,12 +33,38 @@ const App = () => {
 		makeApiCallTwo(forecastWeatherUrl);
 	};
 
+	const handleClick = () => {
+		navigator.geolocation.getCurrentPosition((position) => {
+			console.log(position);
+			let latitude = position.coords.latitude;
+			let longitude = position.coords.longitude;
+			let key = 'f14fde324cf84653bcad1ab6ca1816e8';
+			let units = 'I';
+			let days = '6';
+			const currentWeatherUrl = `https://api.weatherbit.io/v2.0/current?lat=${latitude}&lon=${longitude}&key=${key}&units=${units}`;
+			const forecastWeatherUrl = `https://api.weatherbit.io/v2.0/forecast/daily?&key=${key}&lat=${latitude}&lon=${longitude}&days=${days}&units=${units}`;
+			const makeApiCallOne = (currentWeatherUrl) => {
+				return fetch(currentWeatherUrl)
+					.then((response) => response.json())
+					.then((data) => setCurrentWeather(data.data[0]));
+			};
+			makeApiCallOne(currentWeatherUrl);
+			const makeApiCallTwo = (forecastWeatherUrl) => {
+				return fetch(forecastWeatherUrl)
+					.then((response) => response.json())
+					.then((data) => setWeatherForecast(data));
+			};
+			makeApiCallTwo(forecastWeatherUrl);
+		});
+	};
+
 	return (
 		<div className='App'>
 			<Nav
 				className='nav-container'
 				handleSubmit={handleSubmit}
 				setWeatherSearch={setWeatherSearch}
+				handleClick={handleClick}
 			/>
 			<CurrentWeatherData
 				currentWeather={currentWeather}

@@ -49,7 +49,6 @@ const CurrentWeatherData = ({ currentWeather, weatherForecast }) => {
 			<div>
 				Wind Direction: {currentWeather.wind_dir}° {currentWeather.wind_cdir}
 			</div>
-			<div>Wind Gusts: ? mph</div>
 			<div>Visibility: {currentWeather ? currentWeather.vis : ''} mi</div>
 			<div>Sunrise: {convertTimestamp(sunRise)}</div>
 			<div>Sunset: {convertTimestamp(sunSet)}</div>
