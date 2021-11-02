@@ -1,34 +1,23 @@
 import React from 'react';
 import './Nav.css';
-import locationIcon from '../../img/locationpin.png';
+import { Link, Route } from 'react-router-dom';
+import Favorites from '../Favorites/Favorites';
 
 const Nav = ({ handleSubmit, setWeatherSearch, handleClick }) => {
 	return (
 		<>
 			<div className='nav'>
 				<div>
-					<h1>Logo</h1>
+					<Link to='/'>
+						<h1>Logo</h1>
+					</Link>
 				</div>
 				<div>
-					<input
-						onChange={(event) => {
-							let input = event.target.value;
-							setWeatherSearch(input.replace(/\s+/g, '')); //Remove spaces from input -> https://stackoverflow.com/questions/24580912/remove-all-white-space-from-string-javascript
-						}}
-						type='text'
-						placeholder='New York City, NY'></input>
-					<button onClick={handleSubmit} type='submit'>
-						Submit
-					</button>
-					<img
-						className='location-icon'
-						onClick={handleClick}
-						src={locationIcon}
-						alt='location'
-					/>
+					<h3>Total Weather</h3>
 				</div>
 				<div>
-					<h3>Favorites</h3>
+					<Link to='/favorites'>Favorites</Link>
+					<Route path='/favorites' component={Favorites} />
 				</div>
 			</div>
 		</>

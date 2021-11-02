@@ -1,10 +1,11 @@
 import './App.css';
-import ContactMe from './components/ContactMe/ContactMe';
-import CurrentWeatherData from './components/CurrentWeather/CurrentWeather';
-import MoonInfo from './components/MoonInfo/MoonInfo';
-import Nav from './components/Nav/Nav';
-import WeatherForecast from './components/WeatherForecast/WeatherForecast';
 import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router';
+import { Link } from 'react-router-dom';
+import ContactMe from './components/ContactMe/ContactMe';
+import Nav from './components/Nav/Nav';
+import Footer from './components/Footer/Footer';
+import Weather from './components/Weather/Weather';
 
 const App = () => {
 	const [currentWeather, setCurrentWeather] = useState('');
@@ -82,10 +83,10 @@ const App = () => {
 
 	/// Credit: Convert UNIX Timestamp from --> https://gist.github.com/kmaida/6045266
 	const convertTimestamp = (timestamp) => {
-		let d = new Date(timestamp * 1000),
-			hh = d.getHours(),
+		let date = new Date(timestamp * 1000),
+			hh = date.getHours(),
 			h = hh,
-			min = ('0' + d.getMinutes()).slice(-2),
+			min = ('0' + date.getMinutes()).slice(-2),
 			ampm = 'AM',
 			time;
 		if (hh > 12) {
@@ -101,31 +102,27 @@ const App = () => {
 		return time;
 	};
 
-	console.log(currentWeather);
-	console.log(weatherForecast);
-
 	return (
 		<div className='App'>
-			<Nav
-				className='nav-container'
-				handleSubmit={handleSubmit}
-				setWeatherSearch={setWeatherSearch}
-				handleClick={handleClick}
+			<Route path='/' render={(props) => <Nav {...props} />} />
+			<Route
+				exact
+				path='/'
+				render={(props) => (
+					<Weather
+						{...props}
+						currentWeather={currentWeather}
+						weatherForecast={weatherForecast}
+						convertTimestamp={convertTimestamp}
+						handleSubmit={handleSubmit}
+						setWeatherSearch={setWeatherSearch}
+						handleClick={handleClick}
+					/>
+				)}
 			/>
-			<CurrentWeatherData
-				currentWeather={currentWeather}
-				weatherForecast={weatherForecast}
-				convertTimestamp={convertTimestamp}
-			/>
-			<WeatherForecast
-				weatherForecast={weatherForecast}
-				convertTimestamp={convertTimestamp}
-			/>
-			<MoonInfo
-				weatherForecast={weatherForecast}
-				convertTimestamp={convertTimestamp}
-			/>
-			<ContactMe />
+			<Link to='/contact'>Contact Me</Link>
+			<Route path='/contact' render={(props) => <ContactMe {...props} />} />
+			<Footer />
 		</div>
 	);
 };
