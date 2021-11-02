@@ -117,7 +117,10 @@ const App = () => {
 				weatherForecast={weatherForecast}
 				convertTimestamp={convertTimestamp}
 			/>
-			<WeatherForecast weatherForecast={weatherForecast} />
+			<WeatherForecast
+				weatherForecast={weatherForecast}
+				convertTimestamp={convertTimestamp}
+			/>
 			<MoonInfo
 				weatherForecast={weatherForecast}
 				convertTimestamp={convertTimestamp}

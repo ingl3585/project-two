@@ -1,7 +1,7 @@
 import React from 'react';
 import './WeatherForecast.css';
 
-const WeatherForecast = ({ weatherForecast }) => {
+const WeatherForecast = ({ weatherForecast, convertTimestamp }) => {
 	let dayOneIcon = weatherForecast ? weatherForecast.data[1].weather.icon : '';
 	let dayTwoIcon = weatherForecast ? weatherForecast.data[2].weather.icon : '';
 	let dayThreeIcon = weatherForecast
@@ -38,6 +38,18 @@ const WeatherForecast = ({ weatherForecast }) => {
 						Precipitation Chance:{' '}
 						{weatherForecast ? weatherForecast.data[1].pop : ''}%
 					</div>
+					<div>
+						Sunrise:{' '}
+						{convertTimestamp(
+							weatherForecast ? weatherForecast.data[1].sunrise_ts : ''
+						)}
+					</div>
+					<div>
+						Sunset:{' '}
+						{convertTimestamp(
+							weatherForecast ? weatherForecast.data[1].sunset_ts : ''
+						)}
+					</div>
 				</div>
 				<div>
 					<h4>Day 2</h4>
@@ -58,6 +70,18 @@ const WeatherForecast = ({ weatherForecast }) => {
 					<div>
 						Precipitation Chance:{' '}
 						{weatherForecast ? weatherForecast.data[2].pop : ''}%
+					</div>
+					<div>
+						Sunrise:{' '}
+						{convertTimestamp(
+							weatherForecast ? weatherForecast.data[2].sunrise_ts : ''
+						)}
+					</div>
+					<div>
+						Sunset:{' '}
+						{convertTimestamp(
+							weatherForecast ? weatherForecast.data[2].sunset_ts : ''
+						)}
 					</div>
 				</div>
 				<div>
@@ -80,6 +104,18 @@ const WeatherForecast = ({ weatherForecast }) => {
 						Precipitation Chance:{' '}
 						{weatherForecast ? weatherForecast.data[3].pop : ''}%
 					</div>
+					<div>
+						Sunrise:{' '}
+						{convertTimestamp(
+							weatherForecast ? weatherForecast.data[3].sunrise_ts : ''
+						)}
+					</div>
+					<div>
+						Sunset:{' '}
+						{convertTimestamp(
+							weatherForecast ? weatherForecast.data[3].sunset_ts : ''
+						)}
+					</div>
 				</div>
 				<div>
 					<h4>Day 4</h4>
@@ -101,6 +137,18 @@ const WeatherForecast = ({ weatherForecast }) => {
 						Precipitation Chance:{' '}
 						{weatherForecast ? weatherForecast.data[4].pop : ''}%
 					</div>
+					<div>
+						Sunrise:{' '}
+						{convertTimestamp(
+							weatherForecast ? weatherForecast.data[4].sunrise_ts : ''
+						)}
+					</div>
+					<div>
+						Sunset:{' '}
+						{convertTimestamp(
+							weatherForecast ? weatherForecast.data[4].sunset_ts : ''
+						)}
+					</div>
 				</div>
 				<div>
 					<h4>Day 5</h4>
@@ -121,6 +169,18 @@ const WeatherForecast = ({ weatherForecast }) => {
 					<div>
 						Precipitation Chance:{' '}
 						{weatherForecast ? weatherForecast.data[5].pop : ''}%
+					</div>
+					<div>
+						Sunrise:{' '}
+						{convertTimestamp(
+							weatherForecast ? weatherForecast.data[5].sunrise_ts : ''
+						)}
+					</div>
+					<div>
+						Sunset:{' '}
+						{convertTimestamp(
+							weatherForecast ? weatherForecast.data[5].sunset_ts : ''
+						)}
 					</div>
 				</div>
 			</main>
