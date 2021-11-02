@@ -1,4 +1,5 @@
 import React from 'react';
+import './WeatherForecast.css';
 
 const WeatherForecast = ({ weatherForecast }) => {
 	let dayOneIcon = weatherForecast ? weatherForecast.data[1].weather.icon : '';

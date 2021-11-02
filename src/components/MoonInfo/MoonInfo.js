@@ -1,29 +1,15 @@
 import React from 'react';
+import './MoonInfo.css';
+import newMoon from '../../img/new-moon.png';
+import waxingCrescent from '../../img/waxing-crescent.png';
+import firstQuarter from '../../img/first-quarter.png';
+import waxingGibbous from '../../img/waxing-gibbous.png';
+import fullMoon from '../../img/full-moon.png';
+import waningGibbous from '../../img/waning-gibbous.png';
+import lastQuarter from '../../img/last-quarter.png';
+import waningCrescent from '../../img/waning-crescent.png';
 
-const MoonInfo = ({ weatherForecast }) => {
-	/// Credit: Convert UNIX Timestamp from --> https://gist.github.com/kmaida/6045266
-	const convertTimestamp = (timestamp) => {
-		var d = new Date(timestamp * 1000),
-			mm = ('0' + (d.getMonth() + 1)).slice(-2),
-			dd = ('0' + d.getDate()).slice(-2),
-			hh = d.getHours(),
-			h = hh,
-			min = ('0' + d.getMinutes()).slice(-2),
-			ampm = 'AM',
-			time;
-		if (hh > 12) {
-			h = hh - 12;
-			ampm = 'PM';
-		} else if (hh === 12) {
-			h = 12;
-			ampm = 'PM';
-		} else if (hh === 0) {
-			h = 12;
-		}
-		time = h + ':' + min + ' ' + ampm + ' - ' + mm + '/' + dd;
-		return time;
-	};
-
+const MoonInfo = ({ weatherForecast, convertTimestamp }) => {
 	let moonRise = weatherForecast ? weatherForecast.data[0].moonrise_ts : '';
 	let moonSet = weatherForecast ? weatherForecast.data[0].moonset_ts : '';
 	let phase = weatherForecast
@@ -32,28 +18,76 @@ const MoonInfo = ({ weatherForecast }) => {
 
 	const moonPhase = () => {
 		if (phase === 0) {
-			return <span>New Moon</span>;
+			return (
+				<div>
+					<span>New Moon</span>
+					<img className='moon-img' src={newMoon} alt='New Moon' />
+				</div>
+			);
 		}
 		if (phase < 0.25 && phase > 0) {
-			return <span>Waxing Crescent</span>;
+			return (
+				<div>
+					<span>Waxing Crescent</span>
+					<img
+						className='moon-img'
+						src={waxingCrescent}
+						alt='Waxing Crescent'
+					/>
+				</div>
+			);
 		}
 		if (phase === 0.25) {
-			return <span>First Quarter</span>;
+			return (
+				<div>
+					<span>First Quarter</span>
+					<img className='moon-img' src={firstQuarter} alt='First Quarter' />
+				</div>
+			);
 		}
 		if (phase > 0.25 && phase < 0.5) {
-			return <span>Waxing Gibbous</span>;
+			return (
+				<div>
+					<span>Waxing Gibbous</span>
+					<img className='moon-img' src={waxingGibbous} alt='Waxing Gibbous' />
+				</div>
+			);
 		}
 		if (phase === 0.5) {
-			return <span>Full Moon</span>;
+			return (
+				<div>
+					<span>Full Moon</span>
+					<img className='moon-img' src={fullMoon} alt='Full Moon' />
+				</div>
+			);
 		}
 		if (phase > 0.5 && phase < 0.75) {
-			return <span>Waning Gibbous</span>;
+			return (
+				<div>
+					<span>Waning Gibbous</span>
+					<img className='moon-img' src={waningGibbous} alt='Waning Gibbous' />
+				</div>
+			);
 		}
 		if (phase === 0.75) {
-			return <span>Last Quarter</span>;
+			return (
+				<div>
+					<span>Last Quarter</span>
+					<img className='moon-img' src={lastQuarter} alt='Last Quarter' />
+				</div>
+			);
 		}
 		if (phase > 0.75 && phase < 1) {
-			return <span>Waning Crescent</span>;
+			return (
+				<div>
+					<span>Waning Crescent</span>
+					<img
+						className='moon-img'
+						src={waningCrescent}
+						alt='Waning Crescent'
+					/>
+				</div>
+			);
 		}
 	};
 
@@ -65,6 +99,16 @@ const MoonInfo = ({ weatherForecast }) => {
 			<div className='moon-phase'>Moon Phase: {moonPhase(phase)}</div>
 			<div>Moonrise: {convertTimestamp(moonRise)}</div>
 			<div>Moonset: {convertTimestamp(moonSet)}</div>
+			<a
+				target='_blank'
+				href='https://icons8.com/icons/set/moon-phases'
+				rel='noreferrer'>
+				Moon Icons
+			</a>{' '}
+			by{' '}
+			<a target='_blank' href='https://icons8.com' rel='noreferrer'>
+				Icons8
+			</a>
 		</div>
 	);
 };

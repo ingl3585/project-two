@@ -1,6 +1,6 @@
 import React from 'react';
-import locationIcon from '../../img/locationpin.png';
 import './Nav.css';
+import locationIcon from '../../img/locationpin.png';
 
 const Nav = ({ handleSubmit, setWeatherSearch, handleClick }) => {
 	return (
