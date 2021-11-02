@@ -1,26 +1,24 @@
 import React from 'react';
 import './Nav.css';
-import { Link, Route } from 'react-router-dom';
-import Favorites from '../Favorites/Favorites';
+import { Link } from 'react-router-dom';
 
-const Nav = ({ handleSubmit, setWeatherSearch, handleClick }) => {
+const Nav = () => {
 	return (
-		<>
-			<div className='nav'>
-				<div>
-					<Link to='/'>
-						<h1>Logo</h1>
-					</Link>
-				</div>
-				<div>
-					<h3>Total Weather</h3>
-				</div>
-				<div>
-					<Link to='/favorites'>Favorites</Link>
-					<Route path='/favorites' component={Favorites} />
-				</div>
+		<div className='nav'>
+			<div>
+				<Link to='/'>
+					<h3>Logo</h3>
+				</Link>
 			</div>
-		</>
+			<div>
+				<h3>Total Weather</h3>
+			</div>
+			<div>
+				<Link to='/favorites'>
+					<h3>Favorites</h3>
+				</Link>
+			</div>
+		</div>
 	);
 };
 

@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router';
-import { Link } from 'react-router-dom';
+import Favorites from './components/Favorites/Favorites';
 import ContactMe from './components/ContactMe/ContactMe';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
@@ -105,6 +105,7 @@ const App = () => {
 	return (
 		<div className='App'>
 			<Route path='/' render={(props) => <Nav {...props} />} />
+			<Route path='/favorites' component={Favorites} />
 			<Route
 				exact
 				path='/'
@@ -120,7 +121,6 @@ const App = () => {
 					/>
 				)}
 			/>
-			<Link to='/contact'>Contact Me</Link>
 			<Route path='/contact' render={(props) => <ContactMe {...props} />} />
 			<Footer />
 		</div>

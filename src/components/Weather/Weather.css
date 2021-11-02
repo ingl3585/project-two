@@ -1,0 +1,10 @@
+.location-icon {
+    margin-left: 25px;
+    margin-bottom: -6.5px;
+    height: 25px;
+    width: 25px;
+}
+
+.location-icon:hover {
+    cursor: pointer;
+}

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './Weather.css';
 import newMoon from '../../img/new-moon.png';
 import waxingCrescent from '../../img/waxing-crescent.png';
 import firstQuarter from '../../img/first-quarter.png';
@@ -356,6 +358,7 @@ const Weather = ({
 					Icons8
 				</a>
 			</div>
+			<Link to='/contact'>Contact Me</Link>
 		</div>
 	);
 };
