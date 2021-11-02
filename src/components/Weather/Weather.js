@@ -15,6 +15,7 @@ const Weather = ({
 	currentWeather,
 	weatherForecast,
 	convertTimestamp,
+	dailyHoliday,
 	handleSubmit,
 	setWeatherSearch,
 	handleClick,
@@ -115,6 +116,7 @@ const Weather = ({
 	return (
 		<div>
 			<div>
+				Today's National Holiday: {dailyHoliday}
 				<div>
 					<input
 						onChange={(event) => {
@@ -134,7 +136,8 @@ const Weather = ({
 					/>
 				</div>
 				<div>
-					Location: {currentWeather.city_name}, {currentWeather.state_code}
+					<button>Favorite</button> Location: {currentWeather.city_name},{' '}
+					{currentWeather.state_code}
 				</div>
 				<div>
 					<img
