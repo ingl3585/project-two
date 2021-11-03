@@ -157,7 +157,7 @@ const Weather = ({
 				</div>
 				<div className='first-current-weather-info-container'>
 					<div>
-						Location: {currentWeather.city_name}, {currentWeather.state_code}
+						{currentWeather.city_name}, {currentWeather.state_code}
 					</div>
 					<div>{currentWeather.temp}°F</div>
 					<div>{currentWeather ? currentWeather.weather.description : ''}</div>

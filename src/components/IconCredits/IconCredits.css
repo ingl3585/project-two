@@ -1,0 +1,9 @@
+.icon-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 87px;
+    height: 91.5vh;
+    max-width: 100vw;
+}

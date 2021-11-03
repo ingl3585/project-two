@@ -1,0 +1,8 @@
+.favorites-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 91.5vh;
+    max-width: 100vw;
+}
