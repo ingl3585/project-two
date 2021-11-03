@@ -1,4 +1,42 @@
-.nav {
+.nav-container {
+    height: 5vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.logo {
+    grid-column: 1/2;
     display: flex;
-    justify-content: space-between;
+    justify-self: center;
+    align-self: center;
+}
+
+.title {
+    grid-column: 2/3;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.favorites-icon {
+    grid-column: 3/4;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: black;
+}
+
+.full-fav-icon {
+    margin-top: 20%;
+    height: 18px;
+    width: 18px;
+}
+
+.full-fav-icon:hover {
+    cursor: pointer;
 }

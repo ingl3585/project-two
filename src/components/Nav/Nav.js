@@ -1,21 +1,23 @@
-import React from 'react';
 import './Nav.css';
+import fullFav from '../../img/full-fav.png';
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
 	return (
-		<div className='nav'>
-			<div>
-				<Link to='/'>
-					<h3>Logo</h3>
+		<div className='nav-container'>
+			<div className='logo'>
+				<Link className='nav-links' to='/'>
+					<div>Logo</div>
 				</Link>
 			</div>
-			<div>
-				<h3>Total Weather</h3>
+			<div className='title'>
+				<div>Weather App</div>
 			</div>
-			<div>
-				<Link to='/favorites'>
-					<h3>Favorites</h3>
+			<div className='favorites-icon'>
+				<Link className='nav-links' to='/favorites'>
+					<div>
+						<img className='full-fav-icon' src={fullFav} alt='fav-icon' />
+					</div>
 				</Link>
 			</div>
 		</div>

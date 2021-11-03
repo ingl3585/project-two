@@ -1,0 +1,26 @@
+.footer-container {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20%;
+}
+
+.github-icon {
+    height: 24px;
+    width: 24px;
+}
+
+.linkedin-icon {
+    height: 24px;
+    width: 24px;
+}
+
+.icon-credits-link {
+    text-decoration: none;
+    color: black;
+}
+
+.icon-credits-link:hover {
+    cursor: pointer;
+}

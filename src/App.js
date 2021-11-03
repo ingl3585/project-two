@@ -1,11 +1,17 @@
 import './App.css';
+import Nav from './components/Nav/Nav';
+import './components/Nav/Nav.css';
+import Favorites from './components/Favorites/Favorites';
+import './components/Favorites/Favorites.css';
+import Weather from './components/Weather/Weather';
+import './components/Weather/Weather.css';
+import ContactMe from './components/ContactMe/ContactMe';
+import './components/ContactMe/ContactMe.css';
+import Footer from './components/Footer/Footer';
+import './components/Footer/Footer.css';
+import IconCredits from './components/IconCredits/IconCredits';
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router';
-import Favorites from './components/Favorites/Favorites';
-import ContactMe from './components/ContactMe/ContactMe';
-import Nav from './components/Nav/Nav';
-import Footer from './components/Footer/Footer';
-import Weather from './components/Weather/Weather';
 
 const App = () => {
 	const [currentWeather, setCurrentWeather] = useState('');
@@ -113,8 +119,31 @@ const App = () => {
 		return time;
 	};
 
+	/// Credit: Convert UNIX Timestamp from --> https://gist.github.com/kmaida/6045266
+	const convertTimestampMoon = (timestamp) => {
+		let date = new Date(timestamp * 1000),
+			mm = ('0' + (date.getMonth() + 1)).slice(-2),
+			dd = ('0' + date.getDate()).slice(-2),
+			hh = date.getHours(),
+			h = hh,
+			min = ('0' + date.getMinutes()).slice(-2),
+			ampm = 'AM',
+			time;
+		if (hh > 12) {
+			h = hh - 12;
+			ampm = 'PM';
+		} else if (hh === 12) {
+			h = 12;
+			ampm = 'PM';
+		} else if (hh === 0) {
+			h = 12;
+		}
+		time = h + ':' + min + ' ' + ampm + ' - ' + mm + '/' + dd;
+		return time;
+	};
+
 	return (
-		<div className='App'>
+		<div className='container'>
 			<Route path='/' render={(props) => <Nav {...props} />} />
 			<Route path='/favorites' component={Favorites} />
 			<Route
@@ -126,6 +155,7 @@ const App = () => {
 						currentWeather={currentWeather}
 						weatherForecast={weatherForecast}
 						convertTimestamp={convertTimestamp}
+						convertTimestampMoon={convertTimestampMoon}
 						dailyHoliday={dailyHoliday}
 						handleSubmit={handleSubmit}
 						setWeatherSearch={setWeatherSearch}
@@ -134,6 +164,7 @@ const App = () => {
 				)}
 			/>
 			<Route path='/contact' render={(props) => <ContactMe {...props} />} />
+			<Route path='/credits' component={IconCredits} />
 			<Footer />
 		</div>
 	);

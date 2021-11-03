@@ -1,6 +1,5 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
 import './ContactMe.css';
+import { useEffect, useState } from 'react';
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 const credentials = require('../../client_secret.json');
 
@@ -52,7 +51,7 @@ const ContactMe = () => {
 		makeInitialCall();
 	}, []);
 	return (
-		<div>
+		<div className='contact-me-container'>
 			<h3>Contact Me</h3>
 			<div>
 				<input
