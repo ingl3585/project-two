@@ -1,10 +1,8 @@
 .current-weather-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 5fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
     height: 95vh;
-    width: 100vw;
-    max-width: 100vw;
 }
 
 .national-holiday-container {
@@ -32,7 +30,6 @@
     border: none;
     border-bottom: 1px solid black;
     font-size: 15px;
-    /* padding-left: 2.5px; */
     padding-bottom: 2.5px;
     text-align: center;
 }
@@ -96,12 +93,10 @@
 }
 
 .moon-info-container {
-    grid-column: 1/5;
-    grid-row: 5/6;
+    height: 47.5vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 12.5px;
 }
 
 .moon-info-title {
@@ -115,12 +110,16 @@
 .moon-phase {
     grid-column: 1/3;
     grid-row: 2/3;
+    align-items: center;
 }
 
 .moon-phase-info-container {
+    grid-column: 1/3;
+    grid-row: 2/3;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 35px;
 }
 
 .moon-img {
@@ -128,16 +127,8 @@
     width: 60px;
 }
 
-.moonrise-section {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.moonset-section {
-    grid-column: 2/3;
+.moonrise-moonset-section {
+    grid-column: 1/3;
     grid-row: 3/4;
     display: flex;
     justify-content: space-evenly;
@@ -145,8 +136,7 @@
 }
 
 .weather-forecast-container {
-    height: 96vh;
-    width: 100vw;
+    height: 47.5vh;
     display: grid;
     grid-template-rows: 1fr repeat(5, 1.5fr);
 }
@@ -156,6 +146,7 @@
     display: flex;
     align-self: center;
     justify-content: center;
+    padding-bottom: 40px;
 }
 
 .forecast-weather-icons {
@@ -215,5 +206,13 @@
         display: block;
         text-decoration: none;
         color: black;
+    }
+
+    .forecast-sunrise-icon {
+        display: block;
+    }
+
+    .forecast-sunset-icon {
+        display: block;
     }
 }

@@ -1,6 +1,5 @@
 import './Weather.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import newMoon from '../../img/new-moon.png';
 import waxingCrescent from '../../img/waxing-crescent.png';
 import firstQuarter from '../../img/first-quarter.png';
@@ -17,6 +16,7 @@ import sunset from '../../img/sunset.png';
 import precipitation from '../../img/precipitation.png';
 
 const Weather = ({
+	addToFavorites,
 	currentWeather,
 	weatherForecast,
 	convertTimestamp,
@@ -24,6 +24,7 @@ const Weather = ({
 	dailyHoliday,
 	handleSubmit,
 	setWeatherSearch,
+	weatherSearch,
 	handleClick,
 }) => {
 	let sunRise = weatherForecast ? weatherForecast.data[0].sunrise_ts : '';
@@ -126,7 +127,12 @@ const Weather = ({
 					Today's National Holiday: {dailyHoliday}
 				</div>
 				<div className='search-container'>
-					<img className='empty-fav-icon' src={emptyFav} alt='fav-icon' />
+					<img
+						className='empty-fav-icon'
+						onClick={() => addToFavorites(weatherSearch)}
+						src={emptyFav}
+						alt='fav-icon'
+					/>
 					<input
 						className='location-form'
 						onChange={(event) => {
@@ -181,9 +187,11 @@ const Weather = ({
 						{convertTimestamp(sunSet)}
 					</div>
 				</div>
-				<div className='moon-info-container'>
-					<div className='moon-info-title'>Moon Information</div>
-					<div className='moon-phase'>{moonPhase(phase)}</div>
+			</div>
+			<div className='moon-info-container'>
+				<div className='moon-info-title'>Moon Information</div>
+				<div className='moon-phase'>{moonPhase(phase)}</div>
+				<div className='moonrise-moonset-section'>
 					<div className='moonrise-section'>
 						Moonrise: {convertTimestampMoon(moonRise)}
 					</div>

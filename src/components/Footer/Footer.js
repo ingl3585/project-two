@@ -5,7 +5,7 @@ import linkedin from '../../img/icons8-linkedin-48.png';
 
 const Footer = () => {
 	return (
-		<div className='footer-container'>
+		<footer className='footer-container'>
 			<div className='social-icons'>
 				<a href='https://github.com/ingl3585' target='_blank' rel='noreferrer'>
 					<img className='github-icon' src={github} alt='github-icon' />
@@ -23,7 +23,7 @@ const Footer = () => {
 			<Link className='icon-credits-link' to='/credits'>
 				Icon Credits
 			</Link>
-		</div>
+		</footer>
 	);
 };
 

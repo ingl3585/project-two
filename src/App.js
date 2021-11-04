@@ -18,6 +18,7 @@ const App = () => {
 	const [weatherForecast, setWeatherForecast] = useState('');
 	const [weatherSearch, setWeatherSearch] = useState('');
 	const [dailyHoliday, setDailyHoliday] = useState('');
+	const [favorites, setFavorites] = useState([]);
 
 	const handleSubmit = () => {
 		let cityState = weatherSearch;
@@ -93,7 +94,7 @@ const App = () => {
 		const makeApiCallThree = (dailyHolidayUrl) => {
 			return fetch(dailyHolidayUrl)
 				.then((response) => response.json())
-				.then((data) => setDailyHoliday(data.holidays[0]));
+				.then((data) => setDailyHoliday(data.holidays[1]));
 		};
 		makeApiCallThree(dailyHolidayUrl);
 	}, []);
@@ -142,22 +143,33 @@ const App = () => {
 		return time;
 	};
 
+	const addToFavorites = (weatherSearch) => {
+		const newFavoritesList = [...favorites, weatherSearch];
+		setFavorites(newFavoritesList);
+		console.log(newFavoritesList);
+	};
+
 	return (
 		<div className='container'>
 			<Route path='/' render={(props) => <Nav {...props} />} />
-			<Route path='/favorites' component={Favorites} />
+			<Route
+				path='/favorites'
+				render={(props) => <Favorites {...props} favorites={favorites} />}
+			/>
 			<Route
 				exact
 				path='/'
 				render={(props) => (
 					<Weather
 						{...props}
+						addToFavorites={addToFavorites}
 						currentWeather={currentWeather}
 						weatherForecast={weatherForecast}
 						convertTimestamp={convertTimestamp}
 						convertTimestampMoon={convertTimestampMoon}
 						dailyHoliday={dailyHoliday}
 						handleSubmit={handleSubmit}
+						weatherSearch={weatherSearch}
 						setWeatherSearch={setWeatherSearch}
 						handleClick={handleClick}
 					/>

@@ -9,8 +9,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 91.5vh;
-        max-width: 100vw;
+        height: 90vh;
         grid-row: 2/3;
     }
 

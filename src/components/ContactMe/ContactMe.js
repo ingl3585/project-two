@@ -17,8 +17,8 @@ const ContactMe = () => {
 		);
 		await document.useServiceAccountAuth(credentials);
 		await document.loadInfo();
-		let rows = await document.sheetsByIndex[0].getRows();
-		// console.log(rows); //rows = all data
+		// let rows = await document.sheetsByIndex[0].getRows();
+		// // console.log(rows); //rows = all data
 	};
 
 	const handleFirstNameChange = (event) => {
