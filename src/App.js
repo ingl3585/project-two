@@ -17,7 +17,6 @@ const App = () => {
 	const [currentWeather, setCurrentWeather] = useState('');
 	const [weatherForecast, setWeatherForecast] = useState('');
 	const [weatherSearch, setWeatherSearch] = useState('');
-	const [dailyHoliday, setDailyHoliday] = useState('');
 	const [favorites, setFavorites] = useState([]);
 
 	const handleSubmit = () => {
@@ -89,16 +88,6 @@ const App = () => {
 		makeApiCallTwo(forecastWeatherUrl);
 	}, []);
 
-	useEffect(() => {
-		const dailyHolidayUrl = 'https://national-api-day.herokuapp.com/api/today';
-		const makeApiCallThree = (dailyHolidayUrl) => {
-			return fetch(dailyHolidayUrl)
-				.then((response) => response.json())
-				.then((data) => setDailyHoliday(data.holidays[1]));
-		};
-		makeApiCallThree(dailyHolidayUrl);
-	}, []);
-
 	/// Credit: Convert UNIX Timestamp from --> https://gist.github.com/kmaida/6045266
 	const convertTimestamp = (timestamp) => {
 		let date = new Date(timestamp * 1000),
@@ -167,7 +156,6 @@ const App = () => {
 						weatherForecast={weatherForecast}
 						convertTimestamp={convertTimestamp}
 						convertTimestampMoon={convertTimestampMoon}
-						dailyHoliday={dailyHoliday}
 						handleSubmit={handleSubmit}
 						weatherSearch={weatherSearch}
 						setWeatherSearch={setWeatherSearch}

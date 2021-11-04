@@ -5,13 +5,10 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
 	return (
 		<div className='nav-container'>
-			<div className='logo'>
-				<Link className='nav-links' to='/'>
-					<div>Logo</div>
-				</Link>
-			</div>
 			<div className='title'>
-				<div>Weather App</div>
+				<Link className='nav-links' to='/'>
+					<div className='title-font'>Weather</div>
+				</Link>
 			</div>
 			<div className='favorites-icon'>
 				<Link className='nav-links' to='/favorites'>

@@ -47,20 +47,20 @@ const Weather = ({
 		if (phase === 0) {
 			return (
 				<div className='moon-phase-info-container'>
-					<span className='moon-phase-title'>Phase: New Moon</span>
 					<img className='moon-img' src={newMoon} alt='New Moon' />
+					<span className='moon-phase-title'>Phase: New Moon</span>
 				</div>
 			);
 		}
 		if (phase < 0.25 && phase > 0) {
 			return (
 				<div className='moon-phase-info-container'>
-					<span>Phase: Waxing Crescent</span>
 					<img
 						className='moon-img'
 						src={waxingCrescent}
 						alt='Waxing Crescent'
 					/>
+					<span>Phase: Waxing Crescent</span>
 				</div>
 			);
 		}
@@ -123,9 +123,6 @@ const Weather = ({
 	return (
 		<div className='weather-container'>
 			<div className='current-weather-container'>
-				<div className='national-holiday-container'>
-					Today's National Holiday: {dailyHoliday}
-				</div>
 				<div className='search-container'>
 					<img
 						className='empty-fav-icon'
@@ -154,26 +151,30 @@ const Weather = ({
 						alt='location'
 					/>
 				</div>
-				<div className='current-weather-icon-container'>
-					<img
-						src={`https://www.weatherbit.io/static/img/icons/${icon}.png`}
-						alt='weather-icon'
-					/>
-				</div>
-				<div className='first-current-weather-info-container'>
-					<div>
+				<div className='current-weather-info-container'>
+					<div className='city-name'>
 						{currentWeather.city_name}, {currentWeather.state_code}
 					</div>
-					<div>{currentWeather.temp}°F</div>
-					<div>{currentWeather ? currentWeather.weather.description : ''}</div>
-					<div>
-						H: {weatherForecast ? weatherForecast.data[0].high_temp : ''}°F
+					<div className='current-temp'>{currentWeather.temp}°F</div>
+					<div className='current-weather-icon'>
+						<img
+							src={`https://www.weatherbit.io/static/img/icons/${icon}.png`}
+							alt='weather-icon'
+						/>
 					</div>
-					<div>
-						L: {weatherForecast ? weatherForecast.data[0].low_temp : ''}°F
+					<div className='first-current-weather-section'>
+						<div>
+							{currentWeather ? currentWeather.weather.description : ''}
+						</div>
+						<div>
+							H: {weatherForecast ? weatherForecast.data[0].high_temp : ''}°F
+						</div>
+						<div>
+							L: {weatherForecast ? weatherForecast.data[0].low_temp : ''}°F
+						</div>
 					</div>
 				</div>
-				<div className='second-current-weather-info-container'>
+				<div className='second-current-weather-section'>
 					<div>
 						<img src={sunrise} alt='sunrise-icon' />
 						{convertTimestamp(sunRise)}
@@ -201,11 +202,6 @@ const Weather = ({
 				</div>
 			</div>
 			<div className='weather-forecast-container'>
-				<header className='weather-forecast-title'>
-					<div>
-						<div>5 Day Forecast</div>
-					</div>
-				</header>
 				<div className='day-one-forecast'>
 					<h4>Day 1</h4>
 					<div>
@@ -222,7 +218,7 @@ const Weather = ({
 						L: {weatherForecast ? weatherForecast.data[1].min_temp : ''} °F
 					</div>
 					<div>
-						<img src={precipitation} alt='precip-chance-icon' />
+						P:
 						{weatherForecast ? weatherForecast.data[1].pop : ''}%
 					</div>
 					<div className='forecast-sunrise-icon'>
@@ -254,7 +250,7 @@ const Weather = ({
 						L: {weatherForecast ? weatherForecast.data[2].min_temp : ''} °F
 					</div>
 					<div>
-						<img src={precipitation} alt='precip-chance-icon' />
+						P:
 						{weatherForecast ? weatherForecast.data[2].pop : ''}%
 					</div>
 					<div className='forecast-sunrise-icon'>
@@ -286,7 +282,7 @@ const Weather = ({
 						L: {weatherForecast ? weatherForecast.data[3].min_temp : ''} °F
 					</div>
 					<div>
-						<img src={precipitation} alt='precip-chance-icon' />
+						P:
 						{weatherForecast ? weatherForecast.data[3].pop : ''}%
 					</div>
 					<div className='forecast-sunrise-icon'>
@@ -318,7 +314,7 @@ const Weather = ({
 						L: {weatherForecast ? weatherForecast.data[4].min_temp : ''} °F
 					</div>
 					<div>
-						<img src={precipitation} alt='precip-chance-icon' />
+						P:
 						{weatherForecast ? weatherForecast.data[4].pop : ''}%
 					</div>
 					<div className='forecast-sunrise-icon'>
@@ -350,7 +346,8 @@ const Weather = ({
 						L: {weatherForecast ? weatherForecast.data[5].min_temp : ''} °F
 					</div>
 					<div>
-						<img src={precipitation} alt='precip-chance-icon' />
+						{/* <img src={precipitation} alt='precip-chance-icon' /> */}
+						P:
 						{weatherForecast ? weatherForecast.data[5].pop : ''}%
 					</div>
 					<div className='forecast-sunrise-icon'>

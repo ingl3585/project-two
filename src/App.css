@@ -5,12 +5,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Alegreya Sans', sans-serif;
+    max-width: 100vw;
 }
 
 .container {
     display: grid;
     grid-template-rows: 0.15fr 5fr 0.15fr;
-    background: linear-gradient(25deg, #274156 50%, #7d828b 50%);
+    background-image: url('/src/img/weather-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .nav-container {

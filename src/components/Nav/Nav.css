@@ -3,20 +3,20 @@
     width: 100vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid black;
 }
 
-.logo {
+.title {
     grid-column: 1/2;
     display: flex;
     justify-self: center;
     align-self: center;
 }
 
-.title {
-    grid-column: 2/3;
-    display: flex;
-    justify-self: center;
-    align-self: center;
+.title-font {
+    color: black;
+    font-weight: 500;
 }
 
 .favorites-icon {

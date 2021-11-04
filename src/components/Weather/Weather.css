@@ -1,29 +1,27 @@
 .current-weather-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 5fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
     height: 95vh;
+    max-width: 100%;
 }
 
-.national-holiday-container {
+.search-container {
     grid-column: 1/5;
     grid-row: 1/2;
     align-self: center;
     justify-self: center;
 }
 
-.search-container {
-    grid-column: 1/5;
-    grid-row: 2/3;
-    align-self: center;
-    justify-self: center;
+.empty-fav-icon {
+    position: absolute;
+    left: 10%;
+    height: 2.25%;
+    top: 13.5%;
 }
 
-.empty-fav-icon {
-    margin-bottom: -6px;
-    margin-right: 25px;
-    height: 18px;
-    width: 18px;
+.empty-fav-icon:hover {
+    cursor: pointer;
 }
 
 .location-form {
@@ -33,6 +31,7 @@
     font-size: 15px;
     padding: 7px;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .location-form::placeholder {
@@ -49,7 +48,7 @@
 }
 
 .location-button {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.25);
     padding: 7px 14.5px;
     margin-left: 5px;
     border: 1px solid black;
@@ -59,48 +58,88 @@
 }
 
 .location-icon {
-    margin-left: 25px;
-    margin-bottom: -5px;
-    height: 7.5%;
-    width: 7.5%;
+    position: absolute;
+    left: 84.5%;
+    top: 13%;
 }
 
 .location-icon:hover {
     cursor: pointer;
 }
 
-.current-weather-icon-container {
+.current-weather-info-container {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 0 20px;
+    padding: 10px 5px;
+}
+
+.city-name {
+    display: flex;
+    align-self: center;
+    justify-content: center;
     grid-column: 1/3;
-    grid-row: 3/4;
-    align-self: center;
-    justify-self: center;
+    grid-row: 1/2;
+    font-size: 25px;
 }
 
-.empty-fav-icon:hover {
-    cursor: pointer;
+.current-temp {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    font-size: 30px;
 }
 
-.first-current-weather-info-container {
-    grid-column: 3/5;
+.current-weather-icon {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    grid-column: 1/2;
     grid-row: 3/4;
+}
+
+.first-current-weather-section {
+    display: flex;
+    flex-direction: column;
     align-self: center;
     justify-self: center;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    font-size: 20px;
     line-height: 1.5;
 }
 
-.second-current-weather-info-container {
+.second-current-weather-section {
     grid-column: 1/5;
-    grid-row: 4/5;
+    grid-row: 3/4;
     display: flex;
     align-self: center;
     justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 0 20px;
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .moon-info-container {
-    height: 50vh;
+    height: 25vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 0 20px;
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .moon-info-title {
@@ -123,7 +162,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 35px;
 }
 
 .moon-img {
@@ -140,16 +178,12 @@
 }
 
 .weather-forecast-container {
-    height: 95vh;
-    display: grid;
-    grid-template-rows: 1fr repeat(5, 1.5fr);
-}
-
-.weather-forecast-title {
-    grid-row: 1/2;
+    height: 70vh;
     display: flex;
-    align-self: center;
-    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    grid-template-rows: 1fr repeat(4, 1.5fr);
 }
 
 .forecast-weather-icons {
@@ -168,36 +202,56 @@
 .day-one-forecast {
     grid-row: 2/3;
     display: flex;
-    align-self: center;
     justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 0 20px;
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .day-two-forecast {
     grid-row: 3/4;
     display: flex;
-    align-self: center;
     justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 0 20px;
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .day-three-forecast {
     grid-row: 4/5;
     display: flex;
-    align-self: center;
     justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 0 20px;
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .day-four-forecast {
     grid-row: 5/6;
     display: flex;
-    align-self: center;
     justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 0 20px;
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .day-five-forecast {
     grid-row: 6/7;
     display: flex;
-    align-self: center;
     justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 0 20px;
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .contact-me-link {
