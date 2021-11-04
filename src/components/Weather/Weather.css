@@ -93,7 +93,7 @@
 }
 
 .moon-info-container {
-    height: 47.5vh;
+    height: 50vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -136,7 +136,7 @@
 }
 
 .weather-forecast-container {
-    height: 47.5vh;
+    height: 95vh;
     display: grid;
     grid-template-rows: 1fr repeat(5, 1.5fr);
 }
@@ -146,7 +146,6 @@
     display: flex;
     align-self: center;
     justify-content: center;
-    padding-bottom: 40px;
 }
 
 .forecast-weather-icons {
