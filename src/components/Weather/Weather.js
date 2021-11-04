@@ -1,7 +1,6 @@
 import './Weather.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import IconCredits from '../IconCredits/IconCredits';
 import newMoon from '../../img/new-moon.png';
 import waxingCrescent from '../../img/waxing-crescent.png';
 import firstQuarter from '../../img/first-quarter.png';
@@ -360,9 +359,6 @@ const Weather = ({
 					</div>
 				</div>
 			</div>
-			<Link className='contact-me-link' to='/contact'>
-				Contact Me
-			</Link>
 		</div>
 	);
 };

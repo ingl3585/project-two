@@ -1,3 +1,49 @@
 .contact-me-container {
     display: none;
 }
+
+@media screen and (min-width: 1025px) {
+    .contact-me-container {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 91.5vh;
+        max-width: 100vw;
+        grid-row: 2/3;
+    }
+
+    .contact-me-title {
+        padding-bottom: 10px;
+    }
+
+    .first-name-form {
+        height: 50px;
+        width: 150px;
+        padding-left: 10px;
+    }
+    .last-name-form {
+        height: 50px;
+        width: 150px;
+        padding-left: 10px;
+    }
+    .email-form {
+        height: 50px;
+        width: 300px;
+        padding-left: 10px;
+    }
+    .message-form {
+        height: 50px;
+        width: 300px;
+        padding-left: 10px;
+    }
+    .contact-button {
+        height: 50px;
+        width: 300px;
+    }
+    .first-name-form, .last-name-form, .email-form, .message-form:focus {
+        outline: none;
+    }
+    
+}

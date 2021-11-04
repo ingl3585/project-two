@@ -17,6 +17,9 @@ const Footer = () => {
 					<img className='linkedin-icon' src={linkedin} alt='linkedin-icon' />
 				</a>
 			</div>
+			<Link className='contact-me-link' to='/contact'>
+				Contact Me
+			</Link>
 			<Link className='icon-credits-link' to='/credits'>
 				Icon Credits
 			</Link>

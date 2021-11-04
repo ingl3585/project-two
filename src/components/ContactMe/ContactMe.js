@@ -52,15 +52,17 @@ const ContactMe = () => {
 	}, []);
 	return (
 		<div className='contact-me-container'>
-			<h3>Contact Me</h3>
+			<div className='contact-me-title'>Contact Me</div>
 			<div>
 				<input
+					className='first-name-form'
 					type='text'
 					placeholder='First Name'
 					onChange={handleFirstNameChange}
 					value={firstName}
 				/>
 				<input
+					className='last-name-form'
 					type='text'
 					placeholder='Last Name'
 					onChange={handleLastNameChange}
@@ -68,6 +70,7 @@ const ContactMe = () => {
 				/>
 				<br />
 				<input
+					className='email-form'
 					type='text'
 					placeholder='Email Address'
 					onChange={handleEmailChange}
@@ -75,24 +78,16 @@ const ContactMe = () => {
 				/>
 				<br />
 				<input
+					className='message-form'
 					type='text'
 					placeholder='Message'
 					onChange={handleMessageChange}
 					value={message}
 				/>
 				<br />
-				<button type='submit' onClick={handleSubmit}>
+				<button className='contact-button' type='submit' onClick={handleSubmit}>
 					Submit
 				</button>
-				<br />
-				Location icon made by{' '}
-				<a href='https://www.flaticon.com/authors/srip' title='srip'>
-					srip
-				</a>{' '}
-				from{' '}
-				<a href='https://www.flaticon.com/' title='Flaticon'>
-					www.flaticon.com
-				</a>
 			</div>
 		</div>
 	);

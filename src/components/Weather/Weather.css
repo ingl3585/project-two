@@ -32,6 +32,17 @@
     border: none;
     border-bottom: 1px solid black;
     font-size: 15px;
+    /* padding-left: 2.5px; */
+    padding-bottom: 2.5px;
+    text-align: center;
+}
+
+.location-form::placeholder {
+    text-align: center;
+}
+
+.location-form:focus::placeholder {
+    color: transparent;
 }
 
 .location-form:focus {
@@ -197,4 +208,12 @@
 
 .contact-me-link {
     display: none;
+}
+
+@media only screen and (min-width: 1025px) {
+    .contact-me-link {
+        display: block;
+        text-decoration: none;
+        color: black;
+    }
 }
