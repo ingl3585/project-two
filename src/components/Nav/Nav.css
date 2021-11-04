@@ -40,3 +40,13 @@
 .full-fav-icon:hover {
     cursor: pointer;
 }
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 18px;
+    }
+    .full-fav-icon {
+        height: 26px;
+        width: 26px;
+    }
+}

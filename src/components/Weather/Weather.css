@@ -258,7 +258,419 @@
     display: none;
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 768px) {
+
+    .empty-fav-icon {
+        position: absolute;
+        left: 20%;
+        height: 2.75%;
+        top: 13.25%;
+    }
+    .location-form {
+        height: 50px;
+        width: 200px;
+        border: none;
+        border: 1px solid black;
+        border-radius: 15px;
+        font-size: 18px;
+        padding: 7px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    .location-button {
+        height: 50px;
+        width: 100px;
+        background-color: rgba(255, 255, 255, 0.25);
+        padding: 7px 14.5px;
+        margin-left: 5px;
+        border: 1px solid black;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+    .location-icon {
+        position: absolute;
+        left: 76%;
+        height: 3%;
+        top: 13%;
+    }
+    .current-weather-info-container {
+        grid-column: 1/5;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: rgba(255, 255, 255, 0.25);
+        border: 1px solid black;
+        border-radius: 25px;
+        margin: 0 50px;
+        padding: 10px 5px;
+    }
+
+    .city-name {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        font-size: 25px;
+    }
+
+    .current-temp {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        grid-column: 1/3;
+        grid-row: 2/3;
+        font-size: 30px;
+    }
+
+    .current-weather-icon {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .first-current-weather-section {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .second-current-weather-section {
+        grid-column: 1/5;
+        grid-row: 3/4;
+        display: flex;
+        align-self: center;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 50px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    .moon-info-container {
+        height: 25vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 50px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .weather-forecast-container {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+        grid-template-rows: 1fr repeat(4, 1.5fr);
+    }
+
+    .forecast-weather-icons {
+        height: 36px;
+        width: 36px;
+    }
+
+    .forecast-sunrise-icon {
+        display: none;
+    }
+
+    .forecast-sunset-icon {
+        display: none;
+    }
+
+    .day-one-forecast {
+        grid-row: 2/3;
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 50px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .day-two-forecast {
+        grid-row: 3/4;
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 50px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .day-three-forecast {
+        grid-row: 4/5;
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 50px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .day-four-forecast {
+        grid-row: 5/6;
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 50px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .day-five-forecast {
+        grid-row: 6/7;
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 50px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .forecast-sunrise-icon {
+        display: block;
+    }
+
+    .forecast-sunset-icon {
+        display: block;
+    }
+    .contact-me-link {
+        display: block;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .empty-fav-icon {
+        position: absolute;
+        left: 30%;
+        height: 2.75%;
+        top: 13.25%;
+    }
+    .location-form {
+        height: 60px;
+        width: 225px;
+        border: none;
+        border: 1px solid black;
+        border-radius: 15px;
+        font-size: 18px;
+        padding: 7px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    .location-button {
+        height: 60px;
+        width: 112.5px;
+        background-color: rgba(255, 255, 255, 0.25);
+        padding: 7px 14.5px;
+        margin-left: 5px;
+        border: 1px solid black;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+    .location-icon {
+        position: absolute;
+        left: 68%;
+        height: 3%;
+        top: 13%;
+    }
+    .current-weather-info-container {
+        grid-column: 1/5;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: rgba(255, 255, 255, 0.25);
+        border: 1px solid black;
+        border-radius: 25px;
+        margin: 0 375px;
+        padding: 10px 5px;
+    }
+
+    .city-name {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        font-size: 25px;
+    }
+
+    .current-temp {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        grid-column: 1/3;
+        grid-row: 2/3;
+        font-size: 30px;
+    }
+
+    .current-weather-icon {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .first-current-weather-section {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .second-current-weather-section {
+        grid-column: 1/5;
+        grid-row: 3/4;
+        display: flex;
+        align-self: center;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 375px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    .moon-info-container {
+        height: 25vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 375px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .weather-forecast-container {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+        grid-template-rows: 1fr repeat(4, 1.5fr);
+    }
+
+    .forecast-weather-icons {
+        height: 36px;
+        width: 36px;
+    }
+
+    .forecast-sunrise-icon {
+        display: none;
+    }
+
+    .forecast-sunset-icon {
+        display: none;
+    }
+
+    .day-one-forecast {
+        grid-row: 2/3;
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 375px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .day-two-forecast {
+        grid-row: 3/4;
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 375px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .day-three-forecast {
+        grid-row: 4/5;
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 375px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .day-four-forecast {
+        grid-row: 5/6;
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 375px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .day-five-forecast {
+        grid-row: 6/7;
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 375px;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .forecast-sunrise-icon {
+        display: block;
+    }
+
+    .forecast-sunset-icon {
+        display: block;
+    }
+    .contact-me-link {
+        display: block;
+        text-decoration: none;
+        color: black;
+    }
     .contact-me-link {
         display: block;
         text-decoration: none;
