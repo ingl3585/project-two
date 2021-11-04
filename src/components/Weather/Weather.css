@@ -28,13 +28,15 @@
 
 .location-form {
     border: none;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
+    border-radius: 15px;
     font-size: 15px;
-    padding-bottom: 2.5px;
+    padding: 7px;
     text-align: center;
 }
 
 .location-form::placeholder {
+    color: black;
     text-align: center;
 }
 
@@ -48,10 +50,12 @@
 
 .location-button {
     background-color: white;
-    padding-left: 10px;
-    border: none;
+    padding: 7px 14.5px;
+    margin-left: 5px;
+    border: 1px solid black;
     cursor: pointer;
     font-size: 15px;
+    border-radius: 15px;
 }
 
 .location-icon {

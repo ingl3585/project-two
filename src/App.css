@@ -10,6 +10,7 @@
 .container {
     display: grid;
     grid-template-rows: 0.15fr 5fr 0.15fr;
+    background: linear-gradient(25deg, #274156 50%, #7d828b 50%);
 }
 
 .nav-container {
