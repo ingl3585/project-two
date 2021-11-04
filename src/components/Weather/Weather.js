@@ -21,7 +21,6 @@ const Weather = ({
 	weatherForecast,
 	convertTimestamp,
 	convertTimestampMoon,
-	dailyHoliday,
 	handleSubmit,
 	setWeatherSearch,
 	weatherSearch,

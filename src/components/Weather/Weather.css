@@ -22,6 +22,7 @@
 
 .empty-fav-icon:hover {
     cursor: pointer;
+    background-color: red;
 }
 
 .location-form {
