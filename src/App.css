@@ -5,12 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Alegreya Sans', sans-serif;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 .container {
-    display: grid;
-    grid-template-rows: 0.15fr 5fr 0.15fr;
     background-image: url('/src/img/weather-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;

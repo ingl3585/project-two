@@ -10,6 +10,7 @@
         align-items: center;
         justify-content: center;
         height: 90vh;
+        max-width: 100%;
         grid-row: 2/3;
     }
 
