@@ -102,7 +102,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Component | Description | 
 | --- | :---: |  
 | App | This will make the initial data pull and include React Router| 
-| Nav | favorites functionality | 
+| Nav | Favorites functionality | 
 | Weather | This will render the search/current weather/moon info/weather forecast sections |
 | IconCredits | This will render the icon credits section |
 | ContactMe | This will render the contact me section |  
