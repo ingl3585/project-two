@@ -128,8 +128,6 @@ const Weather = ({
 		}
 	};
 
-	// Only taking in weatherCode (current weather icon)
-
 	const currentWeatherIcon = () => {
 		if (weatherCode >= 200 && weatherCode <= 233) {
 			return <img src={thunderstorm} alt='thunderstorm-icon' />;
