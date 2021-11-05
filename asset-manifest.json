@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/weather-app/static/css/main.9d99fb5b.chunk.css",
+    "main.js": "/weather-app/static/js/main.250775e7.chunk.js",
+    "main.js.map": "/weather-app/static/js/main.250775e7.chunk.js.map",
+    "runtime-main.js": "/weather-app/static/js/runtime-main.b234b10a.js",
+    "runtime-main.js.map": "/weather-app/static/js/runtime-main.b234b10a.js.map",
+    "static/js/2.21117a23.chunk.js": "/weather-app/static/js/2.21117a23.chunk.js",
+    "static/js/2.21117a23.chunk.js.map": "/weather-app/static/js/2.21117a23.chunk.js.map",
+    "index.html": "/weather-app/index.html",
+    "static/css/main.9d99fb5b.chunk.css.map": "/weather-app/static/css/main.9d99fb5b.chunk.css.map",
+    "static/js/2.21117a23.chunk.js.LICENSE.txt": "/weather-app/static/js/2.21117a23.chunk.js.LICENSE.txt",
+    "static/media/broken-clouds.213f9a41.svg": "/weather-app/static/media/broken-clouds.213f9a41.svg",
+    "static/media/clear.c33ef664.svg": "/weather-app/static/media/clear.c33ef664.svg",
+    "static/media/cloudy.24f9a474.svg": "/weather-app/static/media/cloudy.24f9a474.svg",
+    "static/media/drizzle.9988edfd.svg": "/weather-app/static/media/drizzle.9988edfd.svg",
+    "static/media/freezing-rain.9305701c.svg": "/weather-app/static/media/freezing-rain.9305701c.svg",
+    "static/media/heavy-rain.130d6250.svg": "/weather-app/static/media/heavy-rain.130d6250.svg",
+    "static/media/light-snow.37766ef2.svg": "/weather-app/static/media/light-snow.37766ef2.svg",
+    "static/media/mod-light-rain.a8183a99.svg": "/weather-app/static/media/mod-light-rain.a8183a99.svg",
+    "static/media/mostly-cloudy.2164d3c4.svg": "/weather-app/static/media/mostly-cloudy.2164d3c4.svg",
+    "static/media/snow.dce3f5e7.svg": "/weather-app/static/media/snow.dce3f5e7.svg",
+    "static/media/thunderstorm.19ff3c30.svg": "/weather-app/static/media/thunderstorm.19ff3c30.svg",
+    "static/media/App.css": "/weather-app/static/media/weather-background.f3a66f8b.jpg",
+    "static/media/weather.7eb91340.svg": "/weather-app/static/media/weather.7eb91340.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b234b10a.js",
+    "static/js/2.21117a23.chunk.js",
+    "static/css/main.9d99fb5b.chunk.css",
+    "static/js/main.250775e7.chunk.js"
+  ]
+}
