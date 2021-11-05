@@ -146,7 +146,7 @@ const App = () => {
 			/>
 			<Route
 				exact
-				path='/weather-app'
+				path='/weather-app/'
 				render={(props) => (
 					<Weather
 						{...props}
