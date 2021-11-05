@@ -102,8 +102,8 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Component | Description | 
 | --- | :---: |  
 | App | This will make the initial data pull and include React Router| 
-| Nav | Search/favorites functionality | 
-| Weather | This will render current weather/moon info/weather forecast sections |
+| Nav | favorites functionality | 
+| Weather | This will render the search/current weather/moon info/weather forecast sections |
 | IconCredits | This will render the icon credits section |
 | ContactMe | This will render the contact me section |  
 | Footer | This will render the footer section | 
@@ -115,9 +115,9 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | --- | :---: |  :---: | :---: | :---: |
 | Search Bar | H | 3hrs| 2hrs | 2hrs |
 | Favorites | M/L | 4hrs| 2hrs | 2hrs |
-| Current Weather Comp | H | 3hrs| 2hrs | 2hrs |
-| Weather Forecast Comp | H | 4hrs| 2hrs | 2hrs |
-| Moon Info Comp | H | 3hrs| 2hrs | 2hrs |
+| Current Weather | H | 3hrs| 2hrs | 2hrs |
+| Weather Forecast | H | 4hrs| 2hrs | 2hrs |
+| Moon Info | H | 3hrs| 2hrs | 2hrs |
 | Contact Me Form | L | 3hrs| 2hrs | 2hrs |
 | Social Icons | M | 0.5hrs| 0.25hrs | 0.25hrs |
 | General Layout | H | 4hrs| 6hrs | 6hrs |
