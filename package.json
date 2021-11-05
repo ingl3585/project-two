@@ -1,6 +1,6 @@
 {
-  "homepage": "http://ingl3585.github.io/weather-app",
-  "name": "project-two",
+  "homepage": "http://ingl3585.github.io/weather-app/",
+  "name": "weather-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
