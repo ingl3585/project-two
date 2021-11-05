@@ -138,8 +138,8 @@ const App = () => {
 	};
 
 	return (
-		<div className='weather-app/container/'>
-			<Route path='/' render={(props) => <Nav {...props} />} />
+		<div className='container'>
+			<Route path='/weather-app/' render={(props) => <Nav {...props} />} />
 			<Route
 				path='/weather-app/favorites/'
 				render={(props) => <Favorites {...props} favorites={favorites} />}
