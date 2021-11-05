@@ -22,7 +22,8 @@
 
 .empty-fav-icon:hover {
     cursor: pointer;
-    background-color: red;
+    background-image: url('/src/img/full-fav.png');
+    background-size: cover;
 }
 
 .location-form {

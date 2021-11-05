@@ -135,7 +135,6 @@ const App = () => {
 	const addToFavorites = (weatherSearch) => {
 		const newFavoritesList = [...favorites, weatherSearch];
 		setFavorites(newFavoritesList);
-		console.log(newFavoritesList); // Delete in the future.
 	};
 
 	return (
