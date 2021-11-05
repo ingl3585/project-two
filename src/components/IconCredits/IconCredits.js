@@ -4,6 +4,12 @@ const IconCredits = () => {
 	return (
 		<div className='icon-info-container'>
 			<div>
+				Animated weather icons made by{' '}
+				<a target='_blank' href='https://www.amcharts.com/' rel='noreferrer'>
+					amCharts
+				</a>
+			</div>
+			<div>
 				Moon phase icons made by{' '}
 				<a target='_blank' href='https://icons8.com' rel='noreferrer'>
 					Icons8

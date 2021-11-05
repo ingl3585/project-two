@@ -43,10 +43,20 @@
 
 @media screen and (min-width: 768px) {
     .title {
-        font-size: 18px;
+        font-size: 22.5px;
     }
     .full-fav-icon {
         height: 26px;
         width: 26px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .title {
+        font-size: 22.5px;
+    }
+    .full-fav-icon {
+        height: 25px;
+        width: 25px;
     }
 }

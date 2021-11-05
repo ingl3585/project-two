@@ -3,12 +3,14 @@
     grid-template-rows: repeat(6, 1fr);
     height: 90vh;
     max-width: 100%;
+    padding: 0 20%;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .favorites-title {
     grid-row: 1/2;
     margin: auto;
-    
+    font-size: 20px;
 }
 
 .favorites-list {
@@ -19,4 +21,24 @@
     list-style: none;
     text-decoration: none;
     color: black;
+}
+
+@media screen and (min-width: 768px) {
+    .favorites-title {
+        font-size: 25px;
+    }
+
+    .favorites-list {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .favorites-title {
+        font-size: 25px;
+    }
+
+    .favorites-list {
+        font-size: 25px;
+    }
 }
