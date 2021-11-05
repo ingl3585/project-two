@@ -17,10 +17,10 @@ const Footer = () => {
 					<img className='linkedin-icon' src={linkedin} alt='linkedin-icon' />
 				</a>
 			</div>
-			<Link className='contact-me-link' to='/contact'>
+			<Link className='contact-me-link' to='/weather-app/contact/'>
 				Contact Me
 			</Link>
-			<Link className='icon-credits-link' to='/credits'>
+			<Link className='icon-credits-link' to='/weather-app/credits/'>
 				Icon Credits
 			</Link>
 		</footer>

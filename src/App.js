@@ -138,10 +138,10 @@ const App = () => {
 	};
 
 	return (
-		<div className='container'>
+		<div className='weather-app/container/'>
 			<Route path='/' render={(props) => <Nav {...props} />} />
 			<Route
-				path='/favorites'
+				path='/weather-app/favorites/'
 				render={(props) => <Favorites {...props} favorites={favorites} />}
 			/>
 			<Route
@@ -162,8 +162,11 @@ const App = () => {
 					/>
 				)}
 			/>
-			<Route path='/contact' render={(props) => <ContactMe {...props} />} />
-			<Route path='/credits' component={IconCredits} />
+			<Route
+				path='/weather-app/contact/'
+				render={(props) => <ContactMe {...props} />}
+			/>
+			<Route path='/weather-app/credits/' component={IconCredits} />
 			<Footer />
 		</div>
 	);
