@@ -11,7 +11,7 @@ const Nav = () => {
 				</Link>
 			</div>
 			<div className='favorites-icon'>
-				<Link className='nav-links' to='/favorites'>
+				<Link className='nav-links' to='/weather-app/favorites'>
 					<div>
 						<img className='full-fav-icon' src={fullFav} alt='fav-icon' />
 					</div>
