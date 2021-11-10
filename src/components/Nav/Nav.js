@@ -7,7 +7,7 @@ const Nav = () => {
 		<div className='nav-container'>
 			<div className='title'>
 				<Link className='nav-links' to='/weather-app/'>
-					<div className='title-font'>Weather</div>
+					<div className='title-font'>Weather App</div>
 				</Link>
 			</div>
 			<div className='favorites-icon'>
