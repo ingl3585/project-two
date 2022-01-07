@@ -261,13 +261,6 @@
 /* Tablet Sizing */
 
 @media only screen and (min-width: 768px) {
-
-    .empty-fav-icon {
-        position: absolute;
-        left: 20%;
-        height: 2.75%;
-        top: 13.25%;
-    }
     .location-form {
         height: 50px;
         width: 200px;
@@ -289,12 +282,6 @@
         cursor: pointer;
         font-size: 18px;
         border-radius: 15px;
-    }
-    .location-icon {
-        position: absolute;
-        left: 76.25%;
-        height: 3.25%;
-        top: 13%;
     }
     .current-weather-info-container {
         grid-column: 1/5;
@@ -524,10 +511,10 @@
         border-radius: 15px;
     }
     .location-icon {
-        position: absolute;
-        left: 68%;
-        height: 3%;
-        top: 13%;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        align-self: center;
+        justify-self: flex-end;
     }
     .current-weather-info-container {
         grid-column: 1/5;

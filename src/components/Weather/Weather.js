@@ -9,7 +9,6 @@ import waningGibbous from '../../img/waning-gibbous.png';
 import lastQuarter from '../../img/last-quarter.png';
 import waningCrescent from '../../img/waning-crescent.png';
 import locationIcon from '../../img/pin.png';
-import emptyFav from '../../img/empty-fav.png';
 import sunrise from '../../img/sunrise.png';
 import sunset from '../../img/sunset.png';
 import precipitation from '../../img/precipitation.png';
@@ -27,7 +26,6 @@ import mostlyCloudy from '../../img/amcharts_weather_icons_1.0.0 2/animated/most
 import unknownPrecip from '../../img/amcharts_weather_icons_1.0.0 2/animated/weather.svg';
 
 const Weather = ({
-	addToFavorites,
 	currentWeather,
 	weatherForecast,
 	convertTimestamp,
