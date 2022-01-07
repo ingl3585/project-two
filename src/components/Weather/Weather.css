@@ -13,19 +13,6 @@
     justify-self: center;
 }
 
-.empty-fav-icon {
-    position: absolute;
-    left: 10%;
-    height: 2.25%;
-    top: 13.5%;
-}
-
-.empty-fav-icon:hover {
-    cursor: pointer;
-    background-image: url('/src/img/full-fav.png');
-    background-size: cover;
-}
-
 .location-form {
     border: none;
     border: 1px solid black;
@@ -60,9 +47,10 @@
 }
 
 .location-icon {
-    position: absolute;
-    left: 84.5%;
-    top: 12.8%;
+    grid-column: 4/5;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
 }
 
 .location-icon:hover {
@@ -747,5 +735,14 @@
 
     .forecast-sunset-icon {
         display: block;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .location-icon {
+        margin-left: 30px;
+    }
+    .location-button {
+        margin-left: 0px;
     }
 }

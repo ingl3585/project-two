@@ -474,12 +474,6 @@ const Weather = ({
 		<div className='weather-container'>
 			<div className='current-weather-container'>
 				<div className='search-container'>
-					<img
-						className='empty-fav-icon'
-						onClick={() => addToFavorites(weatherSearch)}
-						src={emptyFav}
-						alt='fav-icon'
-					/>
 					<input
 						className='location-form'
 						onChange={(event) => {
@@ -494,13 +488,13 @@ const Weather = ({
 						type='submit'>
 						Submit
 					</button>
-					<img
-						className='location-icon'
-						onClick={handleClick}
-						src={locationIcon}
-						alt='location'
-					/>
 				</div>
+				<img
+					className='location-icon'
+					onClick={handleClick}
+					src={locationIcon}
+					alt='location'
+				/>
 				<div className='current-weather-info-container'>
 					<div className='city-name'>
 						{currentWeather.city_name}, {currentWeather.state_code}

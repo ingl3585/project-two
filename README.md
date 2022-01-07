@@ -7,7 +7,7 @@
 
 ## Project Description
 
-Here is a new weather app that will provide more then enough information to satisfy any weather need. This app will let the user search for any city within the US and give the current temperature, high and low temperature for the day, conditions, etc. In addition to that, it will also generate a 5 day forecast and an option to favorite locations so the user does not need to search for their favorite cities. Also for a little extra, moon phases, and sunrise/sunset times will also be implemented. A hopeful functionality will include a weather radar around your current location (given that there is free current radar data available).
+Here is a new weather app that will provide more then enough information to satisfy any weather need. This app will let the user search for any city within the US and give the current temperature, high and low temperature for the day, conditions, etc. In addition to that, it will also generate a 5 day forecast Also for a little extra, moon phases, and sunrise/sunset times will also be implemented. Post MVP aspects will include a weather radar around your current location (given that there is free current radar data available) and favorites functionality.
 
 ## API
 
@@ -66,7 +66,6 @@ I am choosing the Weatherbit API as it is free and easily accessible.
 }
 ```
 
-
 ## Wireframes
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
@@ -80,6 +79,7 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP EXAMPLE
+
 - Search functionality
 - Current weather and icons
 - Five day weather forecast section
@@ -95,7 +95,6 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Text and general animations
 
 ## Components
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
 Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
@@ -107,23 +106,6 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | IconCredits | This will render the icon credits section |
 | ContactMe | This will render the contact me section |  
 | Footer | This will render the footer section | 
-
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evaluate game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
-
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Search Bar | H | 3hrs| 2hrs | 2hrs |
-| Favorites | M/L | 4hrs| 2hrs | 2hrs |
-| Current Weather | H | 3hrs| 2hrs | 2hrs |
-| Weather Forecast | H | 4hrs| 2hrs | 2hrs |
-| Moon Info | H | 3hrs| 2hrs | 2hrs |
-| Contact Me Form | L | 3hrs| 2hrs | 2hrs |
-| Social Icons | M | 0.5hrs| 0.25hrs | 0.25hrs |
-| General Layout | H | 4hrs| 6hrs | 6hrs |
-| General CSS Styling | H | 6hrs| 6hrs | 6hrs |
-| Animations | L | 4hrs| 2hrs | 2hrs |
-| Total | - | 34.5hrs| 26.25 hrs | 26.25 hrs |
 
 ## Additional Libraries
 N/A

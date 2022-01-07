@@ -1,8 +1,6 @@
 import './App.css';
 import Nav from './components/Nav/Nav';
 import './components/Nav/Nav.css';
-import Favorites from './components/Favorites/Favorites';
-import './components/Favorites/Favorites.css';
 import Weather from './components/Weather/Weather';
 import './components/Weather/Weather.css';
 import ContactMe from './components/ContactMe/ContactMe';
@@ -140,10 +138,6 @@ const App = () => {
 	return (
 		<div className='container'>
 			<Route path='/weather-app/' render={(props) => <Nav {...props} />} />
-			<Route
-				path='/weather-app/favorites/'
-				render={(props) => <Favorites {...props} favorites={favorites} />}
-			/>
 			<Route
 				exact
 				path='/weather-app/'
